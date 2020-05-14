@@ -1,0 +1,102 @@
+.register {
+  margin: auto;
+  min-width: 360px;
+  max-width: 1170px;
+  padding-bottom: 165px;
+  border-top: 1px solid transparent;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  button {
+    margin: auto;
+  }
+}
+
+.title {
+  margin: auto;
+  margin-top: 142px;
+  margin-bottom: 8px;
+  width: 510px;
+  font-size: 50px;
+  text-transform: unset;
+}
+
+.description {
+  margin: auto;
+  margin-bottom: 31px;
+  width: 450px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 475px;
+
+  .inputBlock {
+    margin-bottom: 23px;
+    margin-left: 3px;
+
+    input {
+      margin-top: 10px;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+
+  .phoneDescription {
+    display: block;
+    margin-top: 5px;
+    margin-left: 3px;
+    font-size: 12px;
+  }
+
+  .radioButtonsTitle {
+    margin-bottom: 20px;
+    margin-left: 3px;
+    font-size: 16px;
+  }
+
+  .radioButtons {
+    margin-bottom: 4px;
+    margin-left: 3px;
+  }
+}
+
+.inputFileTitle {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .register {
+    button {
+    }
+  }
+
+  .title {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 15px;
+    width: 320px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .description {
+    width: 300px;
+    text-align: center;
+  }
+
+  .form {
+    width: 333px;
+  }
+}

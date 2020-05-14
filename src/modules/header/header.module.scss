@@ -1,0 +1,139 @@
+@import '../../styles/media.scss';
+
+@keyframes menu {
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  99% {
+    transform: translate(0, 0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  min-width: 360px;
+  max-width: 1170px;
+  height: 60px;
+  padding: 0 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  .logo {
+    width: 136px;
+    height: 22px;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    transition: all ease 1s;
+
+    .menuItem {
+      display: block;
+      margin-left: 29px;
+      color: #212529;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: #ef5b4c;
+      }
+    }
+  }
+}
+
+.burger {
+  width: 20px;
+  height: 15px;
+}
+
+.clickToHide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+@media screen and (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    li:first-child {
+      display: none;
+    }
+    hr { display: none; }
+
+    .logo {
+      display: none;
+    }
+  }
+  .clickToHide { display: none; }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    .logo {
+    }
+
+    .menuWrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80vw;
+      height: 100vh;
+      z-index: 5;
+    }
+
+    .menu {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 5;
+      animation: menu 0.4s;
+
+      hr {
+        margin-bottom: 20px;
+      }
+
+      li {
+        display: flex;
+        width: 60%;
+        height: 70px;
+      }
+
+      .logo {
+        margin: auto;
+        width: 80%;
+        height: auto;
+      }
+
+      .menuItem {
+        margin: auto;
+        margin-left: 20px;
+        width: 100%;
+        height: 100%;
+        line-height: 60px;
+        font-size: 24px;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .hide {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+
+@keyframes radio {
+  0% {
+    box-shadow: none;
+    transform: scale(3);
+  }
+
+  75% {
+    box-shadow: none;
+    transform: scale(0.1);
+  }
+
+  99% {
+    box-shadow: none;
+    transform: scale(1.5);
+  }
+}
+
+.formControl {
+  input {
+    width: 468px;
+    height: 38px;
+    padding: 13px;
+    border: solid 1px #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid #80bdff;
+      box-shadow: 0 0 0 3px #e6f2ff, 0 0 0 3px #e6f2ff;
+    }
+  }
+}
+
+.formControl.error {
+  input {
+    border: 1px solid #db3445;
+    box-shadow: 0 0 0 3px #f8d6da, 0 0 0 3px #f8d6da;
+  }
+
+  span {
+    color: #f44336;
+  }
+}
+
+.inputWrap {
+  .textError {
+    color: #db3445;
+  }
+}
+
+.formSummaryError {
+  padding: 5px;
+  color: red;
+  border: red 1px solid;
+}
+
+.radioButton {
+  display: none;
+}
+
+.radioButtonBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  .round {
+    position: relative;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border: solid 1px #b1b8c0;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  span {
+    display: block;
+    line-height: 16px;
+  }
+}
+
+.radioButton:checked + .round {
+  border: none;
+  background-color: #007bff;
+}
+
+.radioButton:checked + .round::before {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  transition: all ease 0.4s;
+  animation: radio 0.4s;
+}
+
+.fileInput {
+  visibility: hidden;
+}
+
+.labelFileInput {
+  position: relative;
+  display: flex;
+  margin-left: 4px;
+  width: 468px;
+  height: 38px;
+  padding: 13px;
+  border: solid 1px #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  .placeholder {
+    color: #b2b9c0;
+    line-height: 12px;
+    font-size: 16px;
+  }
+
+  .placeholder.uploadedText {
+    color: #000;
+  }
+
+  &::after {
+    content: 'Browse';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 82px;
+    height: 100%;
+    line-height: 38px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0 4px 4px 0;
+    border-left: solid 1px #ced4da;
+    background-color: #f8f7f5;
+    box-sizing: border-box;
+  }
+}
+
+.labelFileInput.error {
+  border: 1px solid #db3445;
+
+  &::after {
+    border-left: 1px solid #db3445;
+  }
+}
+
+.inputFileWrap {
+  .textError {
+    color: #db3445;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .formControl {
+    input {
+      width: 332px;
+    }
+  }
+
+  .labelFileInput {
+    width: 332px;
+  }
+}

@@ -1,0 +1,135 @@
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  min-width: 360px;
+  max-width: 1170px;
+  padding-bottom: 14vw;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  .title {
+    margin: auto;
+    margin-top: 144px;
+    margin-bottom: 60px;
+    font-size: 48.5px;
+    text-transform: unset;
+  }
+}
+
+.img {
+  margin-top: 6px;
+  width: 339px;
+  height: 285px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 50px;
+  width: 90%;
+
+  h2 {
+    margin-bottom: 17px;
+    text-transform: unset;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-size: 15.9px;
+    font-weight: 400;
+    text-align: start;
+    text-align: justify;
+  }
+
+  .descriptionAndButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 24px;
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .about {
+    .title {
+      margin-top: 120px;
+    }
+  }
+
+  .img {
+    width: 247px;
+    height: 207px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+
+    h2 {
+    }
+
+    p {
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .descriptionAndButton {
+      width: 435px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    .title {
+      margin-top: 80px;
+      margin-bottom: 25px;
+      width: 290px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  .img {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 247px;
+    height: 207px;
+    float: none;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+
+    h2 {
+      margin: auto;
+      margin-bottom: 20px;
+      width: 340px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .descriptionAndButton {
+      margin: auto;
+      width: 335px;
+      float: none;
+
+      button {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+
+button {
+  display: flex;
+  width: 211px;
+  height: 38px;
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  .text {
+    margin: auto;
+    margin-top: 1px;
+    font-size: 16px;
+  }
+}
+
+.primary {
+  background-color: $primary;
+}
+
+.secondary {
+  width: 100px;
+  color: #ef5b4c;
+
+  .text {
+    margin: 0;
+    text-align: start;
+  }
+}

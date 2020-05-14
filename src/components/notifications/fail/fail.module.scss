@@ -1,0 +1,58 @@
+.fail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  hr {
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    height: 1px;
+    color: #eceef1;
+    border: none;
+    background-color: #eceef1;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    align-self: flex-end;
+    margin-top: 10px;
+    width: 80px;
+    height: 38px;
+  }
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 399px;
+  padding: 16px;
+  border: 1px solid #db3445;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px #f8d6da, 0 0 0 3px #f8d6da;
+}
+
+.fake {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .window {
+    width: 360px;
+    box-sizing: border-box;
+  }
+}
